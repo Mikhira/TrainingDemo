@@ -1,0 +1,31 @@
+#endpoints-config
+rest-endpoints:
+  save:
+    file: /uploadFile
+  get:
+    test-info: https://httpbin.org/get
+
+
+
+
+logging:
+  file: log/dev_app.log
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+    file: "%d %-5level [%thread] %logger : %msg%n"
+  level:
+    org.springframework.web: DEBUG
+    com.example.demo.controller: DEBUG
+    org.hibernate: DEBUG
+
+
+/upload:
+     post:
+       summary: Uploads a file.
+       consumes:
+         - multipart/form-data
+       parameters:
+         - in: formData
+           name: upfile
+           type: file
+           description: The file to upload.
