@@ -10,6 +10,10 @@ public class UploadFileResponse {
         this.size = size;
     }
 
+    public void showText() {
+        System.out.println("Hello");
+    }
+
     public String getFileName() {
         return fileName;
     }
