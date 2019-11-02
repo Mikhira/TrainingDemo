@@ -11,7 +11,6 @@ public class UploadFileResponse {
     }
 
     public void showText() {
-        System.out.println("Hello");
     }
 
     public String getFileName() {
